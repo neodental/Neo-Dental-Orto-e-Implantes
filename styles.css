@@ -316,7 +316,7 @@ html {
 .scroll-indicator {
     position: absolute;
     bottom: 2rem;
-    left: 95%;
+    left: 90%;
     transform: translateX(-50%);
     color: white;
     display: flex;
