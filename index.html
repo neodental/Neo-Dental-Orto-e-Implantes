@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neo Dental Orto e Implantes - Clínica Odontológica</title>
+    <meta name="description" content="Neo Dental oferece tratamentos de ortodontia, implantodontia, prótese e cirurgia odontológica com tecnologia avançada. Duas unidades: Goiana-PE e Sapé-PB." />
+    <meta name="keywords" content="dentista, ortodontia, implante dentário, prótese, cirurgia oral, Goiana, Sapé, PE, PB, odontologia estética" />
+    <meta name="author" content="Neo Dental Orto e Implantes" />
+
+    <meta property="og:title" content="Neo Dental Orto e Implantes - Clínica Odontológica" />
+    <meta property="og:description" content="Transformamos sorrisos com tecnologia avançada e cuidado humanizado. Tratamentos de ortodontia, implantodontia e mais." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/lovable-uploads/6ca34978-3268-4084-84ca-9d9631831cee.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Neo Dental Orto e Implantes" />
+    <meta name="twitter:description" content="Clínica odontológica especializada em ortodontia e implantes" />
+    <meta name="twitter:image" content="/lovable-uploads/6ca34978-3268-4084-84ca-9d9631831cee.png" />
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo-container">
+                    <div class="logo-wrapper">
+                        <img src="./public/lovable-uploads/6ca34978-3268-4084-84ca-9d9631831cee.png" alt="Neo Dental Logo" class="logo">
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav">
+                    <button onclick="scrollToSection('inicio')" class="nav-button nav-button-active">
+                        Início
+                    </button>
+                    <button onclick="scrollToSection('sobre')" class="nav-button">
+                        Sobre Nós
+                    </button>
+                    <button onclick="scrollToSection('servicos')" class="nav-button">
+                        Serviços
+                    </button>
+                    <button onclick="scrollToSection('galeria')" class="nav-button">
+                        Galeria
+                    </button>
+                    <button onclick="scrollToSection('contato')" class="nav-button">
+                        Contato
+                    </button>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="cta-container">
+                    <button class="cta-button" onclick="scrollToSection('contato')">
+                        <svg class="phone-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        Agendar Consulta
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-button" onclick="toggleMobileMenu()">
+                    <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu" style="display: none;">
+                <nav class="mobile-nav">
+                    <button onclick="scrollToSection('inicio')" class="mobile-nav-button">
+                        Início
+                    </button>
+                    <button onclick="scrollToSection('sobre')" class="mobile-nav-button">
+                        Sobre Nós
+                    </button>
+                    <button onclick="scrollToSection('servicos')" class="mobile-nav-button">
+                        Serviços
+                    </button>
+                    <button onclick="scrollToSection('galeria')" class="mobile-nav-button">
+                        Galeria
+                    </button>
+                    <button onclick="scrollToSection('contato')" class="mobile-nav-button">
+                        Contato
+                    </button>
+                    <button class="mobile-cta-button" onclick="scrollToSection('contato')">
+                        <svg class="phone-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        Agendar Consulta
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">NEO DENTAL</h1>
+                    <h2 class="hero-subtitle">Orto e Implantes</h2>
+                    <p class="hero-description">
+                        Transformamos sorrisos com tecnologia avançada, 
+                        cuidado humanizado e excelência em tratamentos odontológicos.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <button class="hero-btn-primary" onclick="scrollToSection('contato')">
+                            <svg class="phone-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            Agendar Consulta
+                        </button>
+                        
+                        <button class="hero-btn-secondary" onclick="scrollToSection('sobre')">
+                            <svg class="map-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Conheça Nossa Clínica
+                        </button>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Anos de Experiência</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Unidades</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Biossegurança</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator">
+                <div class="scroll-line"></div>
+                <span>Role para baixo</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="sobre" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Sobre Nós</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3 class="about-welcome">Seja bem-vindo!</h3>
+                        <div class="about-description">
+                            <p>
+                                A Clínica Neo Dental Orto e Implantes tem como prioridade a <strong>biossegurança, qualidade, agilidade e acessibilidade</strong> à todos os tratamentos odontológicos.
+                            </p>
+                            <p>
+                                Contamos com profissionais especializados em suas respectivas áreas, possibilitando a resolução dos tratamentos de alta complexidade em um único lugar e no menor tempo possível.
+                            </p>
+                            <p>
+                                Através de procedimentos exclusivos e atendimento premium para sua necessidade, a Neo Dental trabalha diariamente pelo seu bem-estar, com garantia de um resultado <strong>impecável e duradouro</strong> para o seu sorriso.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-image">
+                        <img src="./public/lovable-uploads/519c3f8d-b73d-4853-9a55-88f0b08e37da.png" alt="Neo Dental Logo" class="logo">
+                    </div>
+                </div>
+                
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 12l2 2 4-4"></path>
+                                <path d="M21 12c.552 0 1-.448 1-1V5c0-.552-.448-1-1-1H3c-.552 0-1 .448-1 1v6c0 .552.448 1 1 1h9l2-2 4 4h3z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="value-title">Biossegurança</h4>
+                        <p class="value-description">Protocolos rigorosos de segurança e higienização.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12,6 12,12 16,14"></polyline>
+                            </svg>
+                        </div>
+                        <h4 class="value-title">Agilidade</h4>
+                        <p class="value-description">Tratamentos eficientes no menor tempo possível.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h4 class="value-title">Especialistas</h4>
+                        <p class="value-description">Profissionais especializados em suas áreas.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"></polyline>
+                            </svg>
+                        </div>
+                        <h4 class="value-title">Qualidade</h4>
+                        <p class="value-description">Resultados impecáveis e duradouros.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicos" class="services-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nossos Serviços</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-description">
+                        Oferecemos uma gama completa de tratamentos odontológicos com tecnologia de ponta 
+                        e profissionais especializados.
+                    </p>
+                </div>
+
+                <!-- Main Services -->
+                <div class="main-services">
+                    <div class="service-card main-service">
+                        <div class="service-image-container">
+                            <img src="./public/lovable-uploads/adf19b4c-dea9-4b50-b220-9259640dac04.png" alt="Neo Dental Logo" class="service-image">
+                            <div class="service-overlay">
+                                <div class="service-icon-circle">
+                                    <img src="./src/assets/orthodontics-icon.png" alt="Ortodontia" class="service-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Ortodontia</h3>
+                            <p class="service-description">Correção do posicionamento dos dentes e estruturas maxilares com tecnologia avançada e aparelhos modernos.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card main-service">
+                        <div class="service-image-container">
+                            <img src="./public/lovable-uploads/ebc75930-454a-4a0c-b776-cf2876adb975.png" alt="Neo Dental Logo" class="service-image">
+                            <div class="service-overlay">
+                                <div class="service-icon-circle">
+                                    <img src="./src/assets/implant-icon.png" alt="Implantodontia" class="service-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Implantodontia</h3>
+                            <p class="service-description">Reposição de dentes perdidos com implantes de titânio, devolvendo função mastigatória e estética.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card main-service">
+                        <div class="service-image-container">
+                            <img src="./public/lovable-uploads/068f7319-92b8-4a6f-a9cc-f8cb3849613a.png" alt="Neo Dental Logo" class="service-image">
+                            <div class="service-overlay">
+                                <div class="service-icon-circle">
+                                    <img src="./src/assets/prosthetics-icon.png" alt="Prótese" class="service-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Prótese</h3>
+                            <p class="service-description">Restauração e reabilitação oral com próteses fixas e removíveis de alta qualidade.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card main-service">
+                        <div class="service-image-container">
+                            <img src="./src/assets/cirurgia-exemplo-new.jpg" alt="Cirurgias" class="service-image">
+                            <div class="service-overlay">
+                                <div class="service-icon-circle">
+                                    <img src="./src/assets/surgery-icon.png" alt="Cirurgias" class="service-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Cirurgias</h3>
+                            <p class="service-description">Procedimentos cirúrgicos orais realizados com precisão e cuidado em ambiente seguro.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Services -->
+                <div class="additional-services">
+                    <h3 class="additional-services-title">Serviços Especializados</h3>
+                    <div class="additional-services-grid">
+                        <div class="service-card additional-service">
+                            <div class="service-image-container">
+                                <img src="./src/assets/estetica-exemplo-new.jpg" alt="Odontologia Estética" class="service-image">
+                                <div class="service-overlay">
+                                    <div class="service-icon-circle">
+                                        <img src="./src/assets/cosmetic-icon.png" alt="Estética" class="service-icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-content">
+                                <h3 class="service-title">Odontologia Estética</h3>
+                                <p class="service-description">Transformação do seu sorriso com procedimentos estéticos avançados e materiais de primeira linha.</p>
+                            </div>
+                        </div>
+
+                        <div class="service-card additional-service">
+                            <div class="service-image-container">
+                                <img src="./src/assets/lentes-exemplo-new.jpg" alt="Lentes de Contato Dental" class="service-image">
+                                <div class="service-overlay">
+                                    <div class="service-icon-circle">
+                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-content">
+                                <h3 class="service-title">Lentes de Contato Dental</h3>
+                                <p class="service-description">Laminados ultrafinos para correção de imperfeições e criação de sorrisos perfeitos.</p>
+                            </div>
+                        </div>
+
+                        <div class="service-card additional-service">
+                            <div class="service-image-container">
+                                <img src="./src/assets/coroas-exemplo-new.jpg" alt="Coroas de Porcelana" class="service-image">
+                                <div class="service-overlay">
+                                    <div class="service-icon-circle">
+                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="8" r="7"></circle>
+                                            <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"></polyline>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-content">
+                                <h3 class="service-title">Coroas de Porcelana</h3>
+                                <p class="service-description">Restaurações completas em porcelana com estética natural e durabilidade excepcional.</p>
+                            </div>
+                        </div>
+
+                        <div class="service-card additional-service">
+                            <div class="service-image-container">
+                                <img src="./src/assets/raio-x-exemplo.jpg" alt="Raio-x Panorâmico" class="service-image">
+                                <div class="service-overlay">
+                                    <div class="service-icon-circle">
+                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M3 7l3 3 3-3m0 8l3 3 3-3M3 11h18M5 21V3M19 21V3"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-content">
+                                <h3 class="service-title">Raio-x Panorâmico</h3>
+                                <p class="service-description">Diagnóstico preciso com equipamentos de radiologia digital de última geração.</p>
+                            </div>
+                        </div>
+
+                        <div class="service-card additional-service">
+                            <div class="service-image-container">
+                                <img src="./src/assets/camera-exemplo.jpg" alt="Consultas com Câmera Intraoral" class="service-image">
+                                <div class="service-overlay">
+                                    <div class="service-icon-circle">
+                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                                            <circle cx="12" cy="13" r="4"></circle>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-content">
+                                <h3 class="service-title">Consultas com Câmera Intraoral</h3>
+                                <p class="service-description">Exames detalhados com tecnologia de imagem intraoral para diagnósticos precisos.</p>
+                            </div>
+                        </div>
+
+                        <div class="service-card additional-service">
+                            <div class="service-image-container">
+                                <img src="./public/lovable-uploads/e5306ebf-9131-4331-990f-4ea5477e41e9.png" alt="Sedação com Óxido Nitroso" class="service-image">
+                                <div class="service-overlay">
+                                    <div class="service-icon-circle">
+                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"></path>
+                                            <path d="M9.6 4.6A2 2 0 1 1 11 8H2"></path>
+                                            <path d="M12.6 19.4A2 2 0 1 0 14 16H2"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-content">
+                                <h3 class="service-title">Sedação com Óxido Nitroso</h3>
+                                <p class="service-description">Procedimentos dentários confortáveis e livres de ansiedade com sedação segura.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="galeria" class="gallery-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nossa Clínica</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-description">
+                        Conheça nossas instalações modernas e confortáveis, 
+                        projetadas para oferecer o melhor atendimento.
+                    </p>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item" onclick="openImageModal('./public/lovable-uploads/519c3f8d-b73d-4853-9a55-88f0b08e37da.png')">
+                        <img src="./public/lovable-uploads/519c3f8d-b73d-4853-9a55-88f0b08e37da.png" alt="Recepção da Neo Dental" />
+                    </div>
+                    <div class="gallery-item" onclick="openImageModal('./public/lovable-uploads/57d3cbf6-ee0c-4fb3-b8fd-57387c45832d.png')">
+                        <img src="./public/lovable-uploads/57d3cbf6-ee0c-4fb3-b8fd-57387c45832d.png" alt="Sala de espera da clínica" />
+                    </div>
+                    <div class="gallery-item" onclick="openImageModal('./public/lovable-uploads/57cda24e-e0c3-4932-901b-bee54f5f416d.png')">
+                        <img src="./public/lovable-uploads/57cda24e-e0c3-4932-901b-bee54f5f416d.png" alt="Corredor da clínica" />
+                    </div>
+                    <div class="gallery-item" onclick="openImageModal('./public/lovable-uploads/c7b11550-9fa5-40e8-a555-54ebdef9683e.png')">
+                        <img src="./public/lovable-uploads/c7b11550-9fa5-40e8-a555-54ebdef9683e.png" alt="Consultório" />
+                    </div>
+                    <div class="gallery-item" onclick="openImageModal('./public/lovable-uploads/fa6a9606-f466-4bc8-b5dd-6a87705b2266.png')">
+                        <img src="./public/lovable-uploads/fa6a9606-f466-4bc8-b5dd-6a87705b2266.png" alt="Cadeira odontológica" />
+                    </div>
+                    <div class="gallery-item" onclick="openImageModal('./public/lovable-uploads/f2e3712b-50a4-4883-b9df-974989cfb650.png')">
+                        <img src="./public/lovable-uploads/f2e3712b-50a4-4883-b9df-974989cfb650.png" alt="Área de descanso pós procedimentos" />
+                    </div>
+                    <div class="gallery-item" onclick="openImageModal('./public/lovable-uploads/514b480c-bd33-4e3d-a6d4-dec4796eaaca.png')">
+                        <img src="./public/lovable-uploads/514b480c-bd33-4e3d-a6d4-dec4796eaaca.png" alt="Escritório" />
+                    </div>
+                    <div class="gallery-item" onclick="openImageModal('./public/lovable-uploads/6cadc639-7a66-489b-88b4-98d0a4d0a73c.png')">
+                        <img src="./public/lovable-uploads/6cadc639-7a66-489b-88b4-98d0a4d0a73c.png" alt="Consultório moderno com equipamentos avançados" />
+                    </div>
+                    <div class="gallery-item" onclick="openImageModal('./public/lovable-uploads/2db1336f-b24d-4599-8b33-1e081ab281ae.png')">
+                        <img src="./public//lovable-uploads/2db1336f-b24d-4599-8b33-1e081ab281ae.png" alt="Sala de procedimentos odontológicos" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contato" class="contact-section">
+            <div class="container">
+                <div class="section-header light">
+                    <h2 class="section-title">Nossas Unidades</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-description">
+                        Estamos prontos para atendê-lo em nossas duas unidades. 
+                        Entre em contato e agende sua consulta.
+                    </p>
+                </div>
+
+                <div class="units-grid">
+                    <!-- Unidade Goiana -->
+                    <div class="unit-card">
+                        <div class="unit-header">
+                            <h3 class="unit-title">Unidade Goiana</h3>
+                            <div class="unit-address">
+                                <svg class="map-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>R. Augusta, 29, Goiana - PE</span>
+                            </div>
+                        </div>
+                        <div class="unit-actions">
+                            <button class="contact-btn whatsapp" onclick="openWhatsApp('+55 81 99522-4348', 'Unidade Goiana')">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                                </svg>
+                                WhatsApp: +55 81 99522-4348
+                            </button>
+                            
+                            <button class="contact-btn phone" onclick="window.open('tel:08136261167')">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                Telefone: 081 3626-1167
+                            </button>
+                            
+                            <button class="contact-btn maps" onclick="openMaps('https://www.google.com.br/maps/place/R.+Augusta,+29,+Goiana+-+PE,+55900-000/@-7.5597519,-34.999059,17z/data=!3m1!4b1!4m5!3m4!1s0x7ab62885d52325f:0xb8bb92fd2a89ccd6!8m2!3d-7.5597572!4d-34.9968703?shorturl=1')">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                Ver no Google Maps
+                            </button>
+                            
+                            <button class="contact-btn instagram" onclick="openInstagram('https://www.instagram.com/neodentalgoianape/')">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                                Siga no Instagram
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Unidade Sapé -->
+                    <div class="unit-card">
+                        <div class="unit-header">
+                            <h3 class="unit-title">Unidade Sapé</h3>
+                            <div class="unit-address">
+                                <svg class="map-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>Av. Comendador Renato Ribeiro Coutinho, 1539 - Sapé, PB</span>
+                            </div>
+                        </div>
+                        <div class="unit-actions">
+                            <button class="contact-btn whatsapp" onclick="openWhatsApp('+55 83 99132-0775', 'Unidade Sapé')">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                                </svg>
+                                WhatsApp: +55 83 99132-0775
+                            </button>
+                            
+                            <button class="contact-btn phone" onclick="window.open('tel:08332831380')">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                Telefone: 083 3283-1380
+                            </button>
+                            
+                            <button class="contact-btn maps" onclick="openMaps('https://www.google.com.br/maps/place/Av.+Comendador+Renato+Ribeiro+Coutinho,+1539+-+Sap%C3%A9,+PB/@-7.0985742,-35.2277163,17z/data=!3m1!4b1!4m6!3m5!1s0x7ac581ae91e8d5b:0x9a8f7e2c3d4b5a6c!8m2!3d-7.0985742!4d-35.2277163!16s%2Fg%2F11c1rkx2y1?entry=ttu')">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                Ver no Google Maps
+                            </button>
+                            
+                            <button class="contact-btn instagram" onclick="openInstagram('https://www.instagram.com/neo_dentalsape/')">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                                Siga no Instagram
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hours Info -->
+                <div class="hours-info">
+                    <div class="hours-header">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12,6 12,12 16,14"></polyline>
+                        </svg>
+                        <h3>Horário de Funcionamento</h3>
+                    </div>
+                    <div class="hours-grid">
+                        <div class="hours-item">
+                            <p class="hours-day">Segunda à Sexta</p>
+                            <p class="hours-time">8:00 às 18:00</p>
+                        </div>
+                        <div class="hours-item">
+                            <p class="hours-day">Sábado</p>
+                            <p class="hours-time">8:00 às 12:00</p>
+                        </div>
+                    </div>
+                    <p class="emergency-note">
+                        Atendimento de urgência via WhatsApp 24h
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal" onclick="closeImageModal()">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeImageModal()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <img id="modalImage" src="" alt="Imagem ampliada">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
